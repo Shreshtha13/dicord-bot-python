@@ -52,4 +52,6 @@ async def magic8(ctx, *, question):
     await ctx.send(f'Question : {question} \nAns : {random.choice(responses)}')
 
 
-client.run('ODk2OTk3MTUxNzEwNzgxNDkw.YWPPsg.H06b2Vf4iCWpLqBhDXUYT2KgWhw')
+from decouple import config
+TOKEN = config('TOKEN')
+client.run(TOKEN)
